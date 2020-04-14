@@ -1,15 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
 
 const path = require('path')
 
 module.exports = {
   entry: {
-    budle: './src/index.js',
+    budle: './src/index.js'
   },
   output: {
     filename: 'js/[name].js',
-    path: `${__dirname}/build`,
+    path: `${__dirname}/build`
     /*
     library: '[name]',
     libraryTarget: 'umd'
@@ -30,10 +29,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new Dotenv({
-      path: path.join(__dirname, '.env'),
-      systemvars: true
-    }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       inject: 'head',
