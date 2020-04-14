@@ -10,7 +10,7 @@
 
 ## License
 
-* Code:
+* Code: MIT License
 * Logos: CC BY-ND
 * This project includes open source software.
 
