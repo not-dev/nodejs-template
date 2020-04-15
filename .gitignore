@@ -16,7 +16,7 @@
 *.log
 *.old
 *.tmp
-LICENSE
+build/
 
 # Logs
 logs
