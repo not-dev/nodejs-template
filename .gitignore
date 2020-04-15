@@ -16,7 +16,8 @@
 *.log
 *.old
 *.tmp
-build/
+build
+node_modules
 
 # Logs
 logs
