@@ -10,7 +10,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name]-[hash].min.js',
     path: `${__dirname}/build`
     /*
     library: '[name]',
@@ -32,7 +32,7 @@ module.exports = {
       template: './public/index.html',
       filename: 'index.html',
       inject: 'head',
-      hash: true
+      minify: false
     })
   ],
 }

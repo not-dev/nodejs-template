@@ -18,7 +18,10 @@ module.exports = merge(common, {
   },
   plugins: [
     new CopyPlugin([
-      { from: 'public' }
+      {
+        from: 'public',
+        ignore: []
+      }
     ])
   ]
 })
