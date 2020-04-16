@@ -1,8 +1,8 @@
-const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
-const path = require('path')
+import merge from 'webpack-merge'
+import path from 'path'
+import common from './webpack.common'
 
-module.exports = merge(common, {
+const module = merge(common, {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
@@ -10,5 +10,6 @@ module.exports = merge(common, {
     open: true
   },
   devtool: 'inline-source-map'
-}
-)
+})
+
+export default module

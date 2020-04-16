@@ -1,8 +1,9 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
-module.exports = {
+const module = {
   entry: {
-    budle: './src/index.js'
+    budle: './src/index.ts'
   },
   resolve: {
     extensions: [
@@ -34,5 +35,7 @@ module.exports = {
       inject: 'head',
       minify: false
     })
-  ],
+  ]
 }
+
+export default module

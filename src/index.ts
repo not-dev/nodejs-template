@@ -1,3 +1,5 @@
-import { } from './'
+import func from './helloworld'
 
-export { }
+func.show()
+
+export { func }
