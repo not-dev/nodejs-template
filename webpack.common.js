@@ -9,6 +9,14 @@ module.exports = {
       '.ts', '.js'
     ]
   },
+  output: {
+    filename: 'js/[name].js',
+    path: `${__dirname}/build`
+    /*
+    library: '[name]',
+    libraryTarget: 'umd'
+    */
+  },
   module: {
     rules: [
       {
@@ -19,6 +27,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin()
-  ]
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html',
+      inject: 'head',
+      hash: true
+    })
+  ],
 }
