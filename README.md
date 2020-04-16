@@ -1,3 +1,5 @@
+English / [Japanese](./README_JP.md)
+
 <!-- ![](https://) -->
 
 # Title
