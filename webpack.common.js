@@ -1,18 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
     budle: './src/index.js'
-  },
-  output: {
-    filename: 'js/[name].js',
-    path: `${__dirname}/build`
-    /*
-    library: '[name]',
-    libraryTarget: 'umd'
-    */
   },
   resolve: {
     extensions: [
@@ -29,11 +19,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.html',
-      inject: 'head',
-      hash: true
-    })
+    new CleanWebpackPlugin()
   ]
 }
