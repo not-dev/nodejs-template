@@ -1,15 +1,16 @@
+import webpack from 'webpack'
 import merge from 'webpack-merge'
 import common from './webpack.common'
 
 import CopyPlugin from 'copy-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 
-const module = merge(common, {
+const module:webpack.Configuration = merge(common, {
   mode: 'production',
   optimization: {
     minimizer: [
       new TerserPlugin({
-        extractComments: true,
+        extractComments: false,
         terserOptions: {
           compress: { drop_console: true }
         }

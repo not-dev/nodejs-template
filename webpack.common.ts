@@ -1,7 +1,8 @@
+import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
-const module = {
+const module:webpack.Configuration = {
   entry: {
     budle: './src/index.ts'
   },
@@ -34,6 +35,7 @@ const module = {
       filename: 'index.html',
       inject: 'head',
       minify: false
+      // hash: true
     })
   ]
 }
