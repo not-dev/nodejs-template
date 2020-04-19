@@ -1,8 +1,8 @@
 {
-  "name": "title",
+  "name": "name",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@types/copy-webpack-plugin": "^5.0.0",
