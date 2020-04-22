@@ -7,6 +7,8 @@ const module:webpack.Configuration = merge(common, {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
+    // contentBasePublicPath: '/',
+    // openPage: 'index.html',
     watchContentBase: true,
     open: true
   },

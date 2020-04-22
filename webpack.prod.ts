@@ -22,6 +22,12 @@ const module:webpack.Configuration = merge(common, {
       {
         from: 'public',
         ignore: []
+      },
+      {
+        from: 'README.md'
+      },
+      {
+        from: 'README_JP.md'
       }
     ])
   ]
