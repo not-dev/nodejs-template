@@ -14,7 +14,7 @@ Node.jsプロジェクトのためのボイラープレート。
 * TypeScript
 * eslint
 * webpack
-* Readme, License, gitignore, GitHub Actions
+* GitHub Actions
 
 ## インストール
 
