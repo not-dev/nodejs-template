@@ -51,7 +51,7 @@ npm i -D webpack webpack-cli webpack-dev-server webpack-merge
 npm i -D clean-webpack-plugin copy-webpack-plugin html-webpack-plugin terser-webpack-plugin
 npm i -D ts-node ts-loader @types/copy-webpack-plugin @types/terser-webpack-plugin @types/webpack-dev-server @types/webpack-merge @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ---
-GitHub >> .git, .gitidnore, LICENSE, README.md, .github/workflows/main.yml
+GitHub >> .git, .gitignore, LICENSE, README.md, .github/workflows/main.yml
 ADD >> .eslintignore, README_JP.md, webpack.common.ts, webpack.dev.ts, webpack.prod.ts, public/, res/, src/
 EDIT >> eslintrc.yml, package.json, tsconfig.json
 ```
