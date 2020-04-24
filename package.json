@@ -1,9 +1,12 @@
 {
-  "name": "name",
+  "name": "nodejs-template",
   "version": "0.1.0",
-  "description": "",
+  "description": "Template repository for Node.js project",
   "license": "MIT",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/not-dev/nodejs-template.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/copy-webpack-plugin": "^5.0.0",
