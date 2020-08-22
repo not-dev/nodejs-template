@@ -15,7 +15,7 @@ git clone https://github.com/not-dev/nodejs-template.git
 ## Usage
 
 ```sh
-npm i -f
+npm i
 npm start
 ```
 
