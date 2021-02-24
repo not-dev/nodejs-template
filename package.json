@@ -7,39 +7,44 @@
     "type": "git",
     "url": "https://github.com/not-dev/nodejs-template.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^5.0.2",
-    "@types/terser-webpack-plugin": "^2.2.1",
-    "@types/webpack-dev-server": "^3.11.0",
+    "@types/node": "^14.14.31",
+    "@types/uuid": "^8.3.0",
+    "@types/webpack-dev-server": "^3.11.1",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
+    "@types/webpack-node-externals": "^2.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.21.0",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^5.0.3",
-    "eslint-plugin-standard": "^4.0.1",
-    "html-webpack-plugin": "^4.3.0",
-    "terser-webpack-plugin": "^2.3.7",
-    "ts-loader": "^6.2.2",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "npm-check-updates": "^11.1.8",
+    "ts-loader": "^8.0.17",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.20.28",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^2.5.2"
   },
   "optionalDependencies": {
     "fsevents": "*"
   },
   "scripts": {
     "test": "echo \"no test specified\"",
-    "build": "webpack --config webpack.prod.ts",
-    "start": "webpack-dev-server --config webpack.dev.ts"
+    "build": "npx webpack --config webpack.prod.js",
+    "start": "npx ts-node -r tsconfig-paths/register ./src"
   }
 }
