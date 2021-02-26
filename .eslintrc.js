@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     es2021: true,
     node: true
@@ -26,6 +27,8 @@ module.exports = {
     'no-undef': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
+    "no-use-before-define": 'off',
+    "@typescript-eslint/no-use-before-define": 'error',
     '@typescript-eslint/no-explicit-any': 'off'
   }
 }
