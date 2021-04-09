@@ -1,4 +1,3 @@
-import Dotenv from 'dotenv-webpack'
 import * as path from 'path'
 import type { Configuration } from 'webpack'
 import nodeExternals from 'webpack-node-externals'
@@ -35,7 +34,6 @@ const common: Configuration = {
     ]
   },
   plugins: [
-    new Dotenv()
   ]
 }
 
