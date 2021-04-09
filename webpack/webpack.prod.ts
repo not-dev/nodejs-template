@@ -1,32 +1,30 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import * as path from 'path'
+import TerserPlugin from 'terser-webpack-plugin'
 import type { Configuration } from 'webpack'
 import { merge } from 'webpack-merge'
 
-import _wc from './webpack.common'
-import _wp, { prefix as _prefix } from './webpack.path'
+import common from './webpack.common'
+import wp from './webpack.path'
 
-const common = {
-  config: _wc,
-  path: _wp,
-  prefix: _prefix
-}
-
-const prod:Configuration = merge(common.config, {
+const config: Configuration = merge(common, {
   mode: 'production',
   output: {
-    filename: (data) => {
-      if (data.chunk?.name !== 'index') {
-        return path.posix.join(common.prefix, '[name].js')
-      } else {
-        return path.posix.join(common.prefix, 'index.js')
+    filename: path.posix.join('[name].js'),
+    chunkFilename: path.posix.join('[name]-[contenthash].js'),
+    path: wp.build
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      terserOptions: {
+        compress: { drop_console: false }
       }
-    },
-    path: common.path.build
+    })]
   },
   plugins: [
     new CleanWebpackPlugin()
   ]
 })
 
-export default prod
+export default config

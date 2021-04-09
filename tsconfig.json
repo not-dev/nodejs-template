@@ -17,7 +17,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./bin/@types",
+    "outDir": "./build",
     "rootDir": "./src",
     "moduleResolution": "node",
     "esModuleInterop": true,

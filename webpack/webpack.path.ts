@@ -1,15 +1,11 @@
 import * as path from 'path'
 
-import pkg from '../package.json'
-
 const root = path.dirname(__dirname)
 
 const dir = {
   src: path.join(root, 'src'),
-  build: path.join(root, 'bin')
+  public: path.join(root, 'public'),
+  build: path.join(root, 'build')
 }
 
-const prefix = pkg.name
-
-export { prefix }
 export default dir

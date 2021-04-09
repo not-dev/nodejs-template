@@ -1,10 +1,12 @@
+import Dotenv from 'dotenv-webpack'
 import * as path from 'path'
 import type { Configuration } from 'webpack'
 import nodeExternals from 'webpack-node-externals'
 
+// import nodeExternals from 'webpack-node-externals'
 import wp from './webpack.path'
 
-const config:Configuration = {
+const common: Configuration = {
   target: 'node',
   externals: [nodeExternals()],
   context: wp.src,
@@ -17,7 +19,7 @@ const config:Configuration = {
     ],
     alias: {
       '@assets': path.join(wp.src, 'assets'),
-      '@utils': path.join(wp.src, 'utils')
+      '@util': path.join(wp.src, 'util')
     }
   },
   module: {
@@ -32,8 +34,9 @@ const config:Configuration = {
       }
     ]
   },
-  output: {},
-  plugins: []
+  plugins: [
+    new Dotenv()
+  ]
 }
 
-export default config
+export default common

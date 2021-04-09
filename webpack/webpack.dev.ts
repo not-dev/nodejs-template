@@ -2,27 +2,23 @@ import * as path from 'path'
 import type { Configuration } from 'webpack'
 import { merge } from 'webpack-merge'
 
-import _wc from './webpack.common'
-import _wp, { prefix as _prefix } from './webpack.path'
+import common from './webpack.common'
+import wp from './webpack.path'
 
-const common = {
-  config: _wc,
-  path: _wp,
-  prefix: _prefix
-}
-
-const dev:Configuration = merge(common.config, {
+const config:Configuration = merge(common, {
   mode: 'development',
   output: {
-    filename: path.posix.join(common.prefix, '[name]-[hash].js'),
-    path: common.path.build
+    filename: path.posix.join('[name]-[contenthash].js'),
+    chunkFilename: path.posix.join('[name]-[contenthash].js'),
+    path: wp.build
   },
   devServer: {
-    contentBase: common.path.build,
+    contentBase: wp.public,
     compress: true,
     port: 8080
   },
-  plugins: []
+  plugins: [
+  ]
 })
 
-export default dev
+export default config
