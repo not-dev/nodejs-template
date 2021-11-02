@@ -20,6 +20,8 @@ build/
 dist/
 bin/
 temp/
+.venv/
+.vscode/
 
 # Logs
 logs

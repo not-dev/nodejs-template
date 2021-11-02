@@ -20,6 +20,7 @@ const config: Configuration = merge(common, {
       terserOptions: {
         compress: { drop_console: false }
       }
+      // extractComments: false
     })]
   },
   plugins: [

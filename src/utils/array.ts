@@ -1,3 +1,5 @@
+import type { TupleLTE } from '@utils'
+import { isTupleLTE } from '@utils'
 /**
  * 配列を分割
  * @template T 配列の要素のtype
@@ -5,13 +7,13 @@
  * @param size - チャンクの長さ
  * @returns chunked array
  */
-const arrayChunk = <T>(array:Array<T>, size:number):Array<typeof array> => {
-  return array.reduce((acc:Array<typeof array>, _, index) => {
+const arrayChunk = <T, N extends number>(array:Array<T>, size:N):TupleLTE<T, N>[] => {
+  return array.reduce((chunks:TupleLTE<T, N>[], _, index) => {
     if ((index % size) === 0) {
-      return [...acc, array.slice(index, index + size)]
-    } else {
-      return acc
+      const chunk = array.slice(index, index + size)
+      if (isTupleLTE(chunk, size)) return [...chunks, chunk]
     }
+    return chunks
   }, [])
 }
 

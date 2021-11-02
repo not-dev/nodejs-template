@@ -2,7 +2,6 @@ import * as path from 'path'
 import type { Configuration } from 'webpack'
 import nodeExternals from 'webpack-node-externals'
 
-// import nodeExternals from 'webpack-node-externals'
 import wp from './webpack.path'
 
 const common: Configuration = {
