@@ -29,7 +29,7 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-standard": "^4.1.0",
-    "npm-check-updates": "^11.8.5",
+    "npm-check-updates": "^16.7.4",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.11.0",
