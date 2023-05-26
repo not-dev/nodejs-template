@@ -8,8 +8,6 @@
 *.ppt
 *.exe
 *.bin
-*.cmd
-*.bat
 *.zip
 *.7z
 *.pem
@@ -17,11 +15,8 @@
 *.old
 *.tmp
 build/
-dist/
-bin/
 temp/
-.venv/
-.vscode/
+*.ppk
 
 # Logs
 logs
